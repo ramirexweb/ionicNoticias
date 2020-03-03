@@ -31,6 +31,8 @@ export class NoticiasService {
 
   getTopHeadLines() {
 
+    console.log('gettopheadlines......');
+
     this.headlinesPage++;
     return this.executeQuery<RespuestaTopHeadlines>(`/top-headlines?country=us&page=${this.headlinesPage}`);
   }
